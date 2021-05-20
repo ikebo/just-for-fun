@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
     len = sizeof(address);
     result = connect(sockfd, (struct sockaddr *)&address, len);
     // stdout 默认是行缓冲 ref: 
+    // https://stackoverflow.com/questions/1716296/why-does-printf-not-flush-after-the-call-unless-a-newline-is-in-the-format-strin
     printf("result: %d\n", result);
     if (result == -1)
     {
